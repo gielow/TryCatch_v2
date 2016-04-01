@@ -6,6 +6,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using TryCatch.IoC;
 
 namespace TryCatch
 {
@@ -18,6 +19,10 @@ namespace TryCatch
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+
+            // Register de IoC dependencies
+            IoCConfig.Register();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
+using TryCatch.IoC;
 
 namespace TryCatch
 {
@@ -17,6 +18,7 @@ namespace TryCatch
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+            //config.DependencyResolver = new TinyIoCDependencyResolver(IoCConfig.ContainerFactory());
             // Web API routes
             config.MapHttpAttributeRoutes();
 

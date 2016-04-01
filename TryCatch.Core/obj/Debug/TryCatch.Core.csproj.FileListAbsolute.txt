@@ -1,0 +1,9 @@
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Core.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Core.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\obj\Debug\TryCatch.Core.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\obj\Debug\TryCatch.Core.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Data.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Models.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Data.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\bin\Debug\TryCatch.Models.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Core\obj\Debug\TryCatch.Core.csprojResolveAssemblyReference.cache

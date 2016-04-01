@@ -17,7 +17,7 @@
     <AssemblyName>TryCatch</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -308,6 +308,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -321,10 +322,21 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\TryCatch.Data\TryCatch.Data.csproj">
+      <Project>{9DAE5F3B-A59F-4775-AB9C-6D42938DE78F}</Project>
+      <Name>TryCatch.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TryCatch.IoC\TryCatch.IoC.csproj">
+      <Project>{737ecc95-82db-4207-955a-163493cc726b}</Project>
+      <Name>TryCatch.IoC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TryCatch.Models\TryCatch.Models.csproj">
       <Project>{4f88fad6-67d5-4120-a7ab-dbbe6549669f}</Project>
       <Name>TryCatch.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -344,7 +356,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>26905</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:26905/</IISUrl>
+          <IISUrl>http://localhost/TryCatch_v2</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

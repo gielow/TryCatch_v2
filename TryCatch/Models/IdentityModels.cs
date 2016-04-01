@@ -29,5 +29,7 @@ namespace TryCatch.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<TryCatch.Models.Article> Articles { get; set; }
     }
 }

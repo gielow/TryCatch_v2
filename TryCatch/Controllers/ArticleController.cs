@@ -1,39 +1,128 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Description;
+using TryCatch.Data;
+using TryCatch.Models;
 
 namespace TryCatch.Controllers
 {
     public class ArticleController : ApiController
     {
-        // GET: api/Article
-        public IEnumerable<string> Get()
+        IRepository _repository;
+
+        public ArticleController(IRepository repository)
         {
-            return new string[] { "value1", "value2" };
+            _repository = repository;
+        }
+        //private ApplicationDbContext db = new ApplicationDbContext();
+
+        // GET: api/Article
+        public IQueryable<Article> GetArticles()
+        {
+            return _repository.Articles.AsQueryable();
         }
 
         // GET: api/Article/5
-        public string Get(int id)
+        [ResponseType(typeof(Article))]
+        public IHttpActionResult GetArticle(int id)
         {
-            return "value";
-        }
+            /*Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return NotFound();
+            }
 
-        // POST: api/Article
-        public void Post([FromBody]string value)
-        {
+            return Ok(article);*/
+            return Ok(new Article());
         }
 
         // PUT: api/Article/5
-        public void Put(int id, [FromBody]string value)
+        [ResponseType(typeof(void))]
+        public IHttpActionResult PutArticle(int id, Article article)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (id != article.Id)
+            {
+                return BadRequest();
+            }
+
+            //db.Entry(article).State = EntityState.Modified;
+
+            try
+            {
+                //db.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!ArticleExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return StatusCode(HttpStatusCode.NoContent);
+        }
+
+        // POST: api/Article
+        [ResponseType(typeof(Article))]
+        public IHttpActionResult PostArticle(Article article)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            //db.Articles.Add(article);
+            //db.SaveChanges();
+
+            return CreatedAtRoute("DefaultApi", new { id = article.Id }, article);
         }
 
         // DELETE: api/Article/5
-        public void Delete(int id)
+        [ResponseType(typeof(Article))]
+        public IHttpActionResult DeleteArticle(int id)
         {
+            /*Article article = db.Articles.Find(id);
+            if (article == null)
+            {
+                return NotFound();
+            }
+
+            db.Articles.Remove(article);
+            db.SaveChanges();
+
+            return Ok(article);*/
+            return Ok(new Article());
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                //db.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        private bool ArticleExists(int id)
+        {
+            //return db.Articles.Count(e => e.Id == id) > 0;
+            return false;
         }
     }
 }
