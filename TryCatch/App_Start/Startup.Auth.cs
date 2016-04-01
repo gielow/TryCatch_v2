@@ -10,6 +10,9 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using TryCatch.Providers;
 using TryCatch.Models;
+using TryCatch.IoC;
+using TryCatch.Data;
+using System.Web.Http;
 
 namespace TryCatch
 {
@@ -36,15 +39,18 @@ namespace TryCatch
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
                 TokenEndpointPath = new PathString("/Token"),
-                Provider = new ApplicationOAuthProvider(PublicClientId),
+                //Provider = new ApplicationOAuthProvider(PublicClientId),
+                Provider = new SimpleAuthorizationServerProvider(IoCConfig.Container().Resolve<IRepository>()),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(14),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
                 // In production mode set AllowInsecureHttp = false
                 AllowInsecureHttp = true
             };
 
             // Enable the application to use bearer tokens to authenticate users
-            app.UseOAuthBearerTokens(OAuthOptions);
+            //app.UseOAuthBearerTokens(OAuthOptions);
+            app.UseOAuthAuthorizationServer(OAuthOptions);
+            app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
             // Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(

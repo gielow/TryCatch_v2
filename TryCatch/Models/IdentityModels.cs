@@ -31,5 +31,9 @@ namespace TryCatch.Models
         }
 
         public System.Data.Entity.DbSet<TryCatch.Models.Article> Articles { get; set; }
+
+        public System.Data.Entity.DbSet<TryCatch.Models.Order> Orders { get; set; }
+
+        public System.Data.Entity.DbSet<TryCatch.Models.Customer> Customers { get; set; }
     }
 }

@@ -10,15 +10,18 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using TryCatch.Models;
+using TryCatch.Data;
 
 namespace TryCatch.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {
+        //private readonly IRepository _repository;
         private readonly string _publicClientId;
 
-        public ApplicationOAuthProvider(string publicClientId)
+        public ApplicationOAuthProvider(string publicClientId/*, IRepository repository*/)
         {
+            //_repository = repository;
             if (publicClientId == null)
             {
                 throw new ArgumentNullException("publicClientId");

@@ -71,3 +71,6 @@ E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Data.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Models.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.IoC.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Core.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\Microsoft.Owin.Cors.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\System.Web.Cors.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\Microsoft.Owin.Cors.xml

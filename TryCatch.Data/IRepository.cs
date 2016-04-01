@@ -10,5 +10,7 @@ namespace TryCatch.Data
     public interface IRepository
     {
         List<Article> Articles { get; }
+        List<Order> Orders { get; }
+        List<Customer> Customers { get; }
     }
 }

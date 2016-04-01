@@ -19,9 +19,8 @@ namespace TryCatch.Models
         public string Password { get; set; }
     }
 
-    public class Customer
+    public class Customer : Record
     {
-        public int Id { get; set; }
         public string Title { get; set; }
         [Required]
         [DisplayName("First name")]
@@ -47,19 +46,6 @@ namespace TryCatch.Models
         [Required]
         [DisplayName("House number")]
         public int HouseNumber { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            var obj2 = obj as Customer;
-            if (obj2 == null)
-                return false;
-
-            return this.Email.Equals(obj2.Email);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode();
-        }
+        
     }
 }

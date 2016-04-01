@@ -96,3 +96,6 @@ E:\VSWorkspace\TryCatch_v2\TryCatch\bin\TryCatch.Core.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch\bin\TryCatch.Data.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch\bin\TryCatch.IoC.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch\bin\TryCatch.Core.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch\bin\Microsoft.Owin.Cors.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch\bin\System.Web.Cors.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch\bin\Microsoft.Owin.Cors.xml
