@@ -66,11 +66,11 @@ E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\obj\Debug\TryCatch.Tests.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Data.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Models.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.IoC.dll
-E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Core.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Data.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Models.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.IoC.pdb
-E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Core.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\Microsoft.Owin.Cors.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\System.Web.Cors.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\Microsoft.Owin.Cors.xml
+E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Interfaces.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Tests\bin\Debug\TryCatch.Interfaces.pdb

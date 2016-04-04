@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TryCatch.Models;
 
-namespace TryCatch.Data
+namespace TryCatch.Interfaces
 {
     public interface IRepository
     {

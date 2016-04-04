@@ -9,16 +9,30 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using TryCatch.Data;
+using TryCatch.Interfaces;
 using TryCatch.Models;
 
 namespace TryCatch.Controllers
 {
-//    [Authorize]
-    public class OrderController : ApiController
+    [Authorize]
+    public class OrderController : System.Web.Mvc.Controller
+    {
+        public System.Web.Mvc.ActionResult Index()
+        {
+            var client = new HttpClient();
+            var response = client.GetAsync("http://localhost/TC_v2/api/OrderApi/");
+            var orders = response.Result.Content.ReadAsAsync<IEnumerable<Order>>().Result;
+            return View(orders);
+        }
+    }
+
+    [Authorize]
+    [RoutePrefix("api/Order")]
+    public class OrderApiController : ApiController
     {
         IRepository _repository;
 
-        public OrderController(IRepository repository)
+        public OrderApiController(IRepository repository)
         {
             _repository = repository;
         }

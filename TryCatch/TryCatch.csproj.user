@@ -19,8 +19,8 @@
           <StartAction>URL</StartAction>
           <AspNetDebugging>True</AspNetDebugging>
           <SilverlightDebugging>False</SilverlightDebugging>
-          <NativeDebugging>False</NativeDebugging>
-          <SQLDebugging>False</SQLDebugging>
+          <NativeDebugging>True</NativeDebugging>
+          <SQLDebugging>True</SQLDebugging>
           <ExternalProgram>
           </ExternalProgram>
           <StartExternalURL>http://localhost/TC_v2/</StartExternalURL>

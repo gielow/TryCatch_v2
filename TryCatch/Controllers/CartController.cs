@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using TryCatch.Models;
 
 namespace TryCatch.Controllers
 {
@@ -34,6 +35,12 @@ namespace TryCatch.Controllers
         // DELETE: api/Cart/5
         public void Delete(int id)
         {
+        }
+
+        [HttpGet]
+        public IEnumerable<OrderItem> Items(string guid)
+        {
+            return null;
         }
     }
 }

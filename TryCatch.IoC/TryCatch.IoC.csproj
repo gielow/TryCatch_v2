@@ -75,6 +75,10 @@
       <Project>{9DAE5F3B-A59F-4775-AB9C-6D42938DE78F}</Project>
       <Name>TryCatch.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TryCatch.Interfaces\TryCatch.Interfaces.csproj">
+      <Project>{3affb2f6-c545-4707-9d10-8cc549f857a1}</Project>
+      <Name>TryCatch.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TryCatch.Models\TryCatch.Models.csproj">
       <Project>{4f88fad6-67d5-4120-a7ab-dbbe6549669f}</Project>
       <Name>TryCatch.Models</Name>

@@ -13,6 +13,7 @@ using TryCatch.Models;
 using TryCatch.IoC;
 using TryCatch.Data;
 using System.Web.Http;
+using TryCatch.Interfaces;
 
 namespace TryCatch
 {

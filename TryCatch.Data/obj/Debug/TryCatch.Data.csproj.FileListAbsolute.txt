@@ -5,3 +5,5 @@ E:\VSWorkspace\TryCatch_v2\TryCatch.Data\bin\Debug\TryCatch.Models.pdb
 E:\VSWorkspace\TryCatch_v2\TryCatch.Data\obj\Debug\TryCatch.Data.csprojResolveAssemblyReference.cache
 E:\VSWorkspace\TryCatch_v2\TryCatch.Data\obj\Debug\TryCatch.Data.dll
 E:\VSWorkspace\TryCatch_v2\TryCatch.Data\obj\Debug\TryCatch.Data.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Data\bin\Debug\TryCatch.Interfaces.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Data\bin\Debug\TryCatch.Interfaces.pdb

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TryCatch.Data;
+using TryCatch.Interfaces;
 using TryCatch.Models;
 
-namespace TryCatch.Core
+namespace TryCatch.Data
 {
     public class Repository : IRepository
     {

@@ -8,6 +8,7 @@ using System.Web.Http;
 using TinyIoC;
 using TryCatch.Core;
 using TryCatch.Data;
+using TryCatch.Interfaces;
 
 namespace TryCatch.IoC
 {

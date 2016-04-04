@@ -320,6 +320,10 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Article\Details.cshtml" />
+    <Content Include="Views\Customer\Login.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -336,6 +340,10 @@
     <ProjectReference Include="..\TryCatch.Data\TryCatch.Data.csproj">
       <Project>{9DAE5F3B-A59F-4775-AB9C-6D42938DE78F}</Project>
       <Name>TryCatch.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TryCatch.Interfaces\TryCatch.Interfaces.csproj">
+      <Project>{3affb2f6-c545-4707-9d10-8cc549f857a1}</Project>
+      <Name>TryCatch.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\TryCatch.IoC\TryCatch.IoC.csproj">
       <Project>{737ecc95-82db-4207-955a-163493cc726b}</Project>

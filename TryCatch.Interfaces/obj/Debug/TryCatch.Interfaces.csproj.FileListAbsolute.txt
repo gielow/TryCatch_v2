@@ -1,0 +1,7 @@
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\bin\Debug\TryCatch.Interfaces.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\bin\Debug\TryCatch.Interfaces.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\bin\Debug\TryCatch.Models.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\bin\Debug\TryCatch.Models.pdb
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\obj\Debug\TryCatch.Interfaces.csprojResolveAssemblyReference.cache
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\obj\Debug\TryCatch.Interfaces.dll
+E:\VSWorkspace\TryCatch_v2\TryCatch.Interfaces\obj\Debug\TryCatch.Interfaces.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -9,15 +10,28 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using TryCatch.Data;
+using TryCatch.Interfaces;
 using TryCatch.Models;
 
 namespace TryCatch.Controllers
 {
-    public class ArticleController : ApiController
+    public class ArticleController : System.Web.Mvc.Controller
+    {
+        public System.Web.Mvc.ActionResult Index()
+        {
+            var client = new HttpClient();
+            var response = client.GetAsync("http://localhost/TC_v2/api/ArticleApi/");
+            var articles = response.Result.Content.ReadAsAsync<IEnumerable<Article>>().Result;
+            return View(articles);
+        }
+    }
+
+    [RoutePrefix("api/Article")]
+    public class ArticleApiController : ApiController
     {
         IRepository _repository;
 
-        public ArticleController(IRepository repository)
+        public ArticleApiController(IRepository repository)
         {
             _repository = repository;
         }
@@ -27,6 +41,18 @@ namespace TryCatch.Controllers
         public IQueryable<Article> GetArticles()
         {
             return _repository.Articles.AsQueryable();
+        }
+
+        [HttpGet]
+        [Route("Page/{number}")]
+        public IQueryable<Article> Page(int? number)
+        {
+            var pageNumber = 1;
+
+            if (number.HasValue && number.Value > 0)
+                pageNumber = number.Value;
+
+            return _repository.Articles.Skip((pageNumber - 1) * 10).Take(10).AsQueryable();
         }
 
         // GET: api/Article/5
